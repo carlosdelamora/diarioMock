@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		CA42D4A2210E32D200F3B7F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4A1210E32D200F3B7F2 /* AppDelegate.swift */; };
-		CA42D4A4210E32D200F3B7F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4A3210E32D200F3B7F2 /* ViewController.swift */; };
+		CA42D4A4210E32D200F3B7F2 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4A3210E32D200F3B7F2 /* InitialViewController.swift */; };
 		CA42D4A7210E32D200F3B7F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA42D4A5210E32D200F3B7F2 /* Main.storyboard */; };
 		CA42D4A9210E32D700F3B7F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA42D4A8210E32D700F3B7F2 /* Assets.xcassets */; };
 		CA42D4AC210E32D700F3B7F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA42D4AA210E32D700F3B7F2 /* LaunchScreen.storyboard */; };
+		CA42D4B5210EAF2A00F3B7F2 /* PrincipalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4B4210EAF2900F3B7F2 /* PrincipalCollectionViewController.swift */; };
+		CA42D4B9210EC02700F3B7F2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4B8210EC02700F3B7F2 /* GradientView.swift */; };
+		CA42D4BB210EC0DB00F3B7F2 /* PhotoReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4BA210EC0DB00F3B7F2 /* PhotoReusableView.swift */; };
+		CA42D4BD210EC4CF00F3B7F2 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4BC210EC4CF00F3B7F2 /* NewsViewCell.swift */; };
+		CA42D4BF210ED13F00F3B7F2 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA42D4BE210ED13F00F3B7F2 /* CustomNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA42D49E210E32D200F3B7F2 /* DiarioMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiarioMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA42D4A1210E32D200F3B7F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA42D4A3210E32D200F3B7F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA42D4A3210E32D200F3B7F2 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CA42D4A6210E32D200F3B7F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA42D4A8210E32D700F3B7F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA42D4AB210E32D700F3B7F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA42D4AD210E32D700F3B7F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA42D4B4210EAF2900F3B7F2 /* PrincipalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionViewController.swift; sourceTree = "<group>"; };
+		CA42D4B8210EC02700F3B7F2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		CA42D4BA210EC0DB00F3B7F2 /* PhotoReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoReusableView.swift; sourceTree = "<group>"; };
+		CA42D4BC210EC4CF00F3B7F2 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
+		CA42D4BE210ED13F00F3B7F2 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		CA42D4A0210E32D200F3B7F2 /* DiarioMock */ = {
 			isa = PBXGroup;
 			children = (
+				CA42D4B7210EBD2400F3B7F2 /* Layout */,
+				CA42D4B6210EBD1B00F3B7F2 /* Views */,
+				CA42D4B3210EAEFC00F3B7F2 /* ViewControllers */,
 				CA42D4A1210E32D200F3B7F2 /* AppDelegate.swift */,
-				CA42D4A3210E32D200F3B7F2 /* ViewController.swift */,
 				CA42D4A5210E32D200F3B7F2 /* Main.storyboard */,
 				CA42D4A8210E32D700F3B7F2 /* Assets.xcassets */,
 				CA42D4AA210E32D700F3B7F2 /* LaunchScreen.storyboard */,
 				CA42D4AD210E32D700F3B7F2 /* Info.plist */,
 			);
 			path = DiarioMock;
+			sourceTree = "<group>";
+		};
+		CA42D4B3210EAEFC00F3B7F2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA42D4A3210E32D200F3B7F2 /* InitialViewController.swift */,
+				CA42D4B4210EAF2900F3B7F2 /* PrincipalCollectionViewController.swift */,
+				CA42D4BE210ED13F00F3B7F2 /* CustomNavigationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA42D4B6210EBD1B00F3B7F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA42D4B8210EC02700F3B7F2 /* GradientView.swift */,
+				CA42D4BA210EC0DB00F3B7F2 /* PhotoReusableView.swift */,
+				CA42D4BC210EC4CF00F3B7F2 /* NewsViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA42D4B7210EBD2400F3B7F2 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA42D4A4210E32D200F3B7F2 /* ViewController.swift in Sources */,
+				CA42D4B5210EAF2A00F3B7F2 /* PrincipalCollectionViewController.swift in Sources */,
+				CA42D4BB210EC0DB00F3B7F2 /* PhotoReusableView.swift in Sources */,
+				CA42D4BF210ED13F00F3B7F2 /* CustomNavigationViewController.swift in Sources */,
+				CA42D4A4210E32D200F3B7F2 /* InitialViewController.swift in Sources */,
+				CA42D4BD210EC4CF00F3B7F2 /* NewsViewCell.swift in Sources */,
+				CA42D4B9210EC02700F3B7F2 /* GradientView.swift in Sources */,
 				CA42D4A2210E32D200F3B7F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

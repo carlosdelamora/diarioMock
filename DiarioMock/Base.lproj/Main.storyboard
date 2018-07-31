@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3aJ-Iy-FP5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="DiarioMock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="TpD-PT-8QU">
+                                <rect key="frame" x="8" y="138" width="359" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TpD-PT-8QU" secondAttribute="height" multiplier="15:8" id="PnD-Mp-4bN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TpD-PT-8QU" secondAttribute="trailing" constant="8" id="NRV-qr-jLD"/>
+                            <constraint firstItem="TpD-PT-8QU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TuX-5n-SC2"/>
+                            <constraint firstItem="TpD-PT-8QU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="Uf2-QV-Ycd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113" y="-81"/>
+        </scene>
+        <!--Custom Navigation View Controller-->
+        <scene sceneID="TnT-0y-vfn">
+            <objects>
+                <navigationController id="3aJ-Iy-FP5" customClass="CustomNavigationViewController" customModule="DiarioMock" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="awB-Qr-KCl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G79-o5-5ce" kind="relationship" relationship="rootViewController" id="eCL-de-eq7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbd-Zl-ZRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="-81"/>
+        </scene>
+        <!--Principal Collection View Controller-->
+        <scene sceneID="aZg-cT-KIS">
+            <objects>
+                <collectionViewController id="G79-o5-5ce" customClass="PrincipalCollectionViewController" customModule="DiarioMock" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qvG-KU-CPV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yos-dq-mOM">
+                            <size key="itemSize" width="355" height="189"/>
+                            <size key="headerReferenceSize" width="50" height="390"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="sew-h9-X24" customClass="NewsViewCell" customModule="DiarioMock" customModuleProvider="target">
+                                <rect key="frame" x="10" y="390" width="355" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="189"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Adriana" translatesAutoresizingMaskIntoConstraints="NO" id="JEn-NT-VKR">
+                                            <rect key="frame" x="8" y="25" width="177.5" height="139"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dan a CTM primer lugar en planilla de Adriana" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDS-dl-ywu">
+                                            <rect key="frame" x="193.5" y="25" width="153.5" height="70"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="JUÁREZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-yT-wkn">
+                                            <rect key="frame" x="193.5" y="103" width="67" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="OZa-DC-hFl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.3411764706" green="0.85490196080000003" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHr-FK-Hbx">
+                                            <rect key="frame" x="270.5" y="102.5" width="68.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-kT-1Lc">
+                                            <rect key="frame" x="264.5" y="103" width="2" height="21"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="dzI-Vz-Zi4"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="NDS-dl-ywu" firstAttribute="leading" secondItem="JEn-NT-VKR" secondAttribute="trailing" constant="8" id="5JM-3Y-SOn"/>
+                                    <constraint firstItem="JEn-NT-VKR" firstAttribute="width" secondItem="sew-h9-X24" secondAttribute="width" multiplier="0.5" id="5hB-FI-oU3"/>
+                                    <constraint firstItem="mlY-yT-wkn" firstAttribute="height" secondItem="3gr-kT-1Lc" secondAttribute="height" id="7qF-09-Mlz"/>
+                                    <constraint firstItem="JEn-NT-VKR" firstAttribute="leading" secondItem="sew-h9-X24" secondAttribute="leading" constant="8" id="MMw-6P-OfH"/>
+                                    <constraint firstItem="3gr-kT-1Lc" firstAttribute="leading" secondItem="mlY-yT-wkn" secondAttribute="trailing" constant="4" id="MOe-Dr-mx4"/>
+                                    <constraint firstAttribute="trailing" secondItem="NDS-dl-ywu" secondAttribute="trailing" constant="8" id="Oof-a0-CSQ"/>
+                                    <constraint firstItem="sHr-FK-Hbx" firstAttribute="leading" secondItem="3gr-kT-1Lc" secondAttribute="trailing" constant="4" id="SDN-2q-FXY"/>
+                                    <constraint firstAttribute="bottom" secondItem="JEn-NT-VKR" secondAttribute="bottom" constant="25" id="VMv-vK-xcB"/>
+                                    <constraint firstItem="mlY-yT-wkn" firstAttribute="height" secondItem="sHr-FK-Hbx" secondAttribute="height" id="bD9-wc-rL8"/>
+                                    <constraint firstItem="mlY-yT-wkn" firstAttribute="top" secondItem="NDS-dl-ywu" secondAttribute="bottom" constant="8" id="dOX-Mb-lnx"/>
+                                    <constraint firstItem="JEn-NT-VKR" firstAttribute="top" secondItem="sew-h9-X24" secondAttribute="top" constant="25" id="fp1-wC-V2Q"/>
+                                    <constraint firstItem="NDS-dl-ywu" firstAttribute="top" secondItem="sew-h9-X24" secondAttribute="top" constant="25" id="gKI-29-HRt"/>
+                                    <constraint firstItem="sHr-FK-Hbx" firstAttribute="top" secondItem="NDS-dl-ywu" secondAttribute="bottom" constant="8" id="mY2-y4-mck"/>
+                                    <constraint firstItem="mlY-yT-wkn" firstAttribute="centerY" secondItem="3gr-kT-1Lc" secondAttribute="centerY" id="nHp-LR-ozW"/>
+                                    <constraint firstItem="mlY-yT-wkn" firstAttribute="leading" secondItem="JEn-NT-VKR" secondAttribute="trailing" constant="8" id="vab-IL-uTM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="sHr-FK-Hbx" secondAttribute="trailing" constant="8" id="voF-bD-nF2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="JEn-NT-VKR" id="cyi-0t-joT"/>
+                                    <outlet property="newsLabel" destination="NDS-dl-ywu" id="vAB-Rg-WKn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoReusableView" id="tdv-5E-m2B" customClass="PhotoReusableView" customModule="DiarioMock" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AMLO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ec-wC-YyC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oS-WX-8IT" customClass="GradientView" customModule="DiarioMock" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="261" width="375" height="129"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lanza AMLO                    desde aquí lluvia                              de promesas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LS0-G0-3fU">
+                                    <rect key="frame" x="8" y="261" width="367" height="129"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="7oS-WX-8IT" secondAttribute="trailing" id="3iK-nM-zPQ"/>
+                                <constraint firstAttribute="bottom" secondItem="LS0-G0-3fU" secondAttribute="bottom" id="4Dk-UB-xaL"/>
+                                <constraint firstItem="7oS-WX-8IT" firstAttribute="height" secondItem="3Ec-wC-YyC" secondAttribute="height" multiplier="0.33" id="Nuv-vd-bsV"/>
+                                <constraint firstItem="LS0-G0-3fU" firstAttribute="height" secondItem="7oS-WX-8IT" secondAttribute="height" id="QK1-8p-u6A"/>
+                                <constraint firstItem="3Ec-wC-YyC" firstAttribute="leading" secondItem="tdv-5E-m2B" secondAttribute="leading" id="QPO-FR-16g"/>
+                                <constraint firstAttribute="bottom" secondItem="7oS-WX-8IT" secondAttribute="bottom" id="Tdc-bk-H9A"/>
+                                <constraint firstAttribute="trailing" secondItem="3Ec-wC-YyC" secondAttribute="trailing" id="YXA-Bd-AcT"/>
+                                <constraint firstAttribute="trailing" secondItem="LS0-G0-3fU" secondAttribute="trailing" id="cBo-CV-b4K"/>
+                                <constraint firstAttribute="bottom" secondItem="3Ec-wC-YyC" secondAttribute="bottom" id="eks-kN-TSj"/>
+                                <constraint firstItem="7oS-WX-8IT" firstAttribute="leading" secondItem="tdv-5E-m2B" secondAttribute="leading" id="hO3-Vy-eDP"/>
+                                <constraint firstItem="3Ec-wC-YyC" firstAttribute="top" secondItem="tdv-5E-m2B" secondAttribute="top" id="hRC-BK-Tyt"/>
+                                <constraint firstItem="LS0-G0-3fU" firstAttribute="leading" secondItem="tdv-5E-m2B" secondAttribute="leading" constant="8" id="zYf-2m-vKU"/>
+                            </constraints>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="G79-o5-5ce" id="4xq-xn-TlA"/>
+                            <outlet property="delegate" destination="G79-o5-5ce" id="eud-EB-J7I"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Teh-Rb-Ec6"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFL-6N-6d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.5999999999999" y="-81.409295352323838"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AMLO" width="216" height="162"/>
+        <image name="Adriana" width="200" height="133"/>
+        <image name="logo" width="106" height="58"/>
+    </resources>
 </document>
