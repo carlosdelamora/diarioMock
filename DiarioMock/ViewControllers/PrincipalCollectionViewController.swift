@@ -29,9 +29,10 @@ class PrincipalCollectionViewController: UICollectionViewController {
     collectionView?.contentInset = UIEdgeInsetsMake(-navigationBarHeight, 0, 0, 0)
     //navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
     let layout = collectionViewLayout as! UICollectionViewFlowLayout
-    layout.minimumLineSpacing = 1
-     layout.itemSize = CGSize(width: view.frame.width, height: 185)
+    layout.minimumLineSpacing = 4
+    layout.itemSize = CGSize(width: view.frame.width - 4, height: 185)
     //collectionView?.backgroundColor = .lightGray
+    collectionView?.canCancelContentTouches = false 
   }
   
   override func didReceiveMemoryWarning() {
@@ -54,7 +55,6 @@ class PrincipalCollectionViewController: UICollectionViewController {
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NewsViewCell
-    
     // Configure the cell
     return cell
   }
